@@ -1,3 +1,4 @@
+//const port = process.env.PORT | | 8000;
 const express = require("express");
 const app = express();
 app.use(express.json());
@@ -6,8 +7,8 @@ app.use(express.static("public"));
 app.engine("html", require("ejs").renderFile); //11.2k (gzipped: 4.2k)
 app.set("view engine", "html");
 const https = require("https");
-const apiKey = "2060316327493904";
-const url = "https://www.superheroapi.com/api.php/"+apiKey;
+const apiKey = "20603163275623904";
+const url = "https://akabab.github.io/superhero-api/api/all.json";
 const character_id = 1;
 var indice = 1;
 
@@ -34,51 +35,51 @@ var objeto= [{
 }];
 
 app.get("/",(req, res) =>{ 
-    for (let x = 1; x<= 50; x++){
-        https.get(url+"/"+x, (response) => {
+        https.get(url, (response) => {
             let data = "";
             response
                 .on("data", (jdata)=>{
                     data += jdata;
                 })
                 .on("end", () => {
-                    console.log(x, data)
                     var jsonData = JSON.parse(data);
-                    objeto.push({
-                        Image: jsonData.image.url,
-                        ID: jsonData.id,
-                        Name: jsonData.name,
-                        Full_Name: jsonData.biography["full-name"],
-                        Powerstats_Intelligence: jsonData.powerstats.intelligence,
-                        Powerstats_Strength: jsonData.powerstats.strength,
-                        Powerstats_Speed: jsonData.powerstats.speed,
-                        Powerstats_Durability: jsonData.powerstats.durability,
-                        Powerstats_Power: jsonData.powerstats.power,
-                        Powerstats_Combat: jsonData.powerstats.combat,
-                        Place_of_birth: jsonData.biography["place-of-birth"],
-                        Aliases: jsonData.biography.aliases,
-                        Gender: jsonData.appearance.gender,
-                        Race: jsonData.appearance.race,
-                        Height: jsonData.appearance.height,
-                        Weight: jsonData.appearance.weight,
-                        Eye_color: jsonData.appearance["eye-color"],
-                        Hair_color: jsonData.appearance["hair-color"],
-                        Group_affiliation: jsonData.connections["group-affiliation"]
-                    })
+                    for(let x = 0; x <= 562; x++){
+                        objeto.push({
+                            Image: jsonData[x].images["lg"],
+                            ID: jsonData[x].id,
+                            Name: jsonData[x].name,
+                            Full_Name: jsonData[x].biography["full-name"],
+                            Powerstats_Intelligence: jsonData[x].powerstats.intelligence,
+                            Powerstats_Strength: jsonData[x].powerstats.strength,
+                            Powerstats_Speed: jsonData[x].powerstats.speed,
+                            Powerstats_Durability: jsonData[x].powerstats.durability,
+                            Powerstats_Power: jsonData[x].powerstats.power,
+                            Powerstats_Combat: jsonData[x].powerstats.combat,
+                            Place_of_birth: jsonData[x].biography["place-of-birth"],
+                            Aliases: jsonData[x].biography.aliases,
+                            Gender: jsonData[x].appearance.gender,
+                            Race: jsonData[x].appearance.race,
+                            Height: jsonData[x].appearance.height,
+                            Weight: jsonData[x].appearance.weight,
+                            Eye_color: jsonData[x].appearance["eye-color"],
+                            Hair_color: jsonData[x].appearance["hair-color"],
+                            Group_affiliation: jsonData[x].connections["group-affiliation"]
+                        })
+                    }
                 })
                 .on("error",(e)=>{
                    console.log("Error ${e.message}");
                    res.send("Error ${e.message}");
                 });   
         });
-    }
     res.sendFile(__dirname + "/public/html/index.html");
+
 });
 
 app.post("/",(req, res) =>{
     var info = req.body.info;
     var check = false;
-    for (let x = 0; x<= 50; x++){
+    for (let x = 0; x<= 562; x++){
         if(info == objeto[x].Name){
             check = true;
             indice = x;
@@ -91,13 +92,13 @@ app.post("/",(req, res) =>{
 });
 
 app.get("/next",(req, res) =>{ 
-    if(indice>=50){
+    if(indice>=562){
         indice=0;
     }
     indice++;
     var info = objeto[indice].Name;
     var check = false;
-    for (let x = 0; x<= 50; x++){
+    for (let x = 0; x<= 562; x++){
         if(info == objeto[x].Name){
             check = true;
             indice = x;
@@ -110,13 +111,13 @@ app.get("/next",(req, res) =>{
 });
 
 app.get("/previous",(req, res) =>{ 
-    if(indice==0){
-        indice=50;
+    if(indice==1){
+        indice=563;
     }
     indice--;
     var info = objeto[indice].Name;
     var check = false;
-    for (let x = 0; x<= 50; x++){
+    for (let x = 0; x<= 562; x++){
         if(info == objeto[x].Name){
             check = true;
             indice = x;
