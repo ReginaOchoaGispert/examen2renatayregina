@@ -1,0 +1,221 @@
+body{
+    background-color: white;
+}
+
+*{
+    font-family: 'Amiri', serif;
+}
+
+
+.navbar{
+    background-color: black;
+    border-bottom: black 2px solid;
+    font-size: 25px;
+    font-weight: 400;
+    position: relative;
+}
+
+.navbar-brand{
+    background-color: black;
+    border: black 2px solid;
+    border-radius: 15%;
+}
+
+
+
+#logomenucelulares{
+    color: white;
+    background-color: white;
+}
+
+#botonesinicio{
+    position: relative;
+}
+
+#SH{
+    font-size: 20px;
+    font-weight: 400;
+    color: white;
+    font-weight: bold;
+    border: white 2px solid;
+    transition: transform 0.3s ease;
+    margin-top: 10px;
+    display: block;
+    width: 150px;
+}
+
+#SV:hover{
+    color: white;
+    background-color:#ED1D24;
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+#SH{
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 10px;
+    color: white;
+    font-weight: bold;
+    border: white 2px solid;
+    transition: transform 0.3s ease;
+    display: block;
+    width: 150px;
+}
+
+#SH:hover{
+    color: white;
+    background-color: #ED1D24;
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+
+.carousel-caption{
+    color: black;
+    font-size: 25px;
+    font-weight: 400;
+
+}
+
+hr{
+    color:#ED1D24;
+    height: 30%;
+}
+
+h1{
+    color: white;
+    display: block;
+    margin-top: 2%;
+    text-align: center;
+    margin-bottom: 2%;
+}
+
+h2{
+    color: white;
+    display: block;
+    margin-top: 2%;
+    text-align: center;
+    margin-bottom: 2%;
+}
+
+
+#galeriam1{
+    position: relative;
+}
+
+.imggal{
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.imgcont{
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    width: 90%;
+}
+
+.texto-galeria{
+    background-color: black;
+    color: white;
+    font-size: medium;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+.texto-galeria2{
+    background-color: black;
+    color: white;
+    font-size: medium;
+    font-weight: bold;
+    text-align: center;
+}
+  
+.imgcont:hover .middle {
+    opacity: 1;
+}
+
+.container{
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+
+.input-group{
+    width: fit-content;
+    display: flex;
+    -ms-flex-align: center;
+    margin-left: 35%;
+    margin-right: 35%;
+}
+
+.boton1{
+    margin-right: 10%;
+}
+
+.boton2{
+    margin-right: 20%;
+}
+
+#botonesinicio{
+    margin-left: 100%;
+    position:relative;
+}
+
+.jumbotron2{
+    margin-left: 20%;
+    margin-right: 20%;
+    color: black;
+    text-align: center;
+    background-color: white;
+}
+
+h3{
+    color: black;
+    display: block;
+    margin-top: 2%;
+    text-align: center;
+    margin-bottom: 2%;
+}
+
+.regreso{
+    margin-top: 15px;
+    color:white;
+    text-align: left;
+}
+
+.regreso:hover{
+    color: #ED1D24;
+}
+
+.regreso2{
+    margin-top: 15px;
+    color:white;
+    text-align: left;
+    margin-right: 5%;
+}
+
+.regreso2:hover{
+    color: #ED1D24;
+}
+
+.regreso3{
+    margin-top: 15px;
+    color:white;
+    text-align: left;
+}
+
+.regreso3:hover{
+    color: #ED1D24;
+}

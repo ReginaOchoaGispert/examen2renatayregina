@@ -1,0 +1,81 @@
+body{
+    background-color: black;
+}
+
+*{
+    font-family: 'Amiri', serif;
+}
+
+
+.navbar{
+    background-color: black;
+    border-bottom: black 2px solid;
+    font-size: 20px;
+    font-weight: 400;
+}
+.nav-link{
+    color: black;
+    margin-top: 10px;
+}
+
+.navbar-brand{
+    background-color: black;
+    border: black 2px solid;
+    border-radius: 15%;
+}
+
+
+#botonesinicio{
+    position: absolute;
+    right: 2%;
+}
+
+#SV{
+    font-size: 20px;
+    font-weight: 400;
+    color: white;
+    font-weight: bold;
+    border: white 2px solid;
+    transition: transform 0.3s ease;
+    margin-top: 10px;
+    display: block;
+    width: 150px;
+}
+
+#SV:hover{
+    color: white;
+    background-color:#ED1D24;
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+#SH{
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 10px;
+    color: white;
+    font-weight: bold;
+    border: white 2px solid;
+    transition: transform 0.3s ease;
+    display: block;
+    width: 150px;
+}
+
+.noticia {
+    width: 50%;
+    margin: 20px auto;
+    background-color: white;
+    color: black;
+    padding: 15px;
+}
+  
+.noticia img.izquierda {
+    float: left;
+    margin-right: 15px;
+}
+  
+
+  
+.reset {
+    clear: both;
+}

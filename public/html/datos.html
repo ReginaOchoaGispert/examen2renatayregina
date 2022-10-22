@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Marvel</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="css\styles.css">
+        <link rel="stylesheet" href="css\styles2.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Amiri&family=Raleway:wght@700&display=swap" rel="stylesheet">
+        <link rel="icon" href="images\images.png"/>
+      </head>
+    <body>
+
+
+        
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="\public\html\index.html">
+                    <img src="images\Marvel_Logo.svg.png" alt="logo-UP" width="70" height="auto">
+                </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                  <a class="nav-link" >___</a>
+                  <a class= "regreso" href="/">Home</a>
+                </div>
+              </div>
+            </div>
+        </nav>
+        
+    </br>
+
+    <div class="name">
+        <h2 align="center"> <%= Objeto.Name %></h1>
+            <div class="texto-galeria2"> <%= Objeto.Full_Name %> </div>
+    </div>
+    
+    <div class="noticia">
+        <img class="izquierda" src=<%= Objeto.Image %> width="50%" height="auto">
+        <aside> 
+            <p> ID: <%= Objeto.ID %></p>
+            <p><b>Powerstats: </b></p>
+            <p>-Intelligence: <%= Objeto.Powerstats_Intelligence %></p>
+            <P>-Strength: <%= Objeto.Powerstats_Strength %></P>
+            <p>-Speed: <%= Objeto.Powerstats_Speed %></p>
+            <p>-Durability: <%= Objeto.Powerstats_Durability %></p>
+            <p>-Power: <%= Objeto.Powerstats_Power %></p>
+            <p>-Combat: <%= Objeto.Powerstats_Combat %></p>
+            <p> Place of birth: <%= Objeto.Place_of_birth %></p>
+            <p> Aliases: <%= Objeto.Aliases %></p>
+            <p> Gender: <%= Objeto.Gender %></p>
+            <p> Race: <%= Objeto.Race %></p>
+            <p> Height: <%= Objeto.Height %></p>
+            <p> Weight: <%= Objeto.Weight %></p>
+            <p> Eye-color: <%= Objeto.Eye_color %></p>
+            <p> Hair-color: <%= Objeto.Hair_color %></p>
+            <p> Group affiliation: <%= Objeto.Group_affiliation %></p>
+            <aside>
+        <div class="reset"></div>
+      </div>
+      <nav class="navbar navbar-expand-lg" >
+        <div class="container-fluid" >
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class= "regreso2" href="/previous">Previous</a>
+              <a class= "regreso3" href="/next">Next</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </body>
+</html>

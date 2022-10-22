@@ -1,0 +1,98 @@
+/*app.get("/",(req, res) =>{ 
+    images = []
+    https.get(url, (response) => {
+        for (let x = 1; x<= 731; x++){
+            images.push({
+
+            });
+        }
+    }
+    
+    // /url/npoint //ipoint is a url adress //to configurate it:
+    //res.sendFile(__dirname + "/public/html/index.html"); //dirname: refers to the current location of the file
+    //posts.push({
+        //title: "Superhero-pedia", 
+    //});
+    //res.render("home", {});
+});*/
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+
+<!--
+<h2>Full Name: <%= heroes.biography.full-name %></h2>
+<h3>Powerstats</h3>
+<p>Intelligence: <%=heroes.biography.intelligence%></p>
+<p>Strength: <%=heroes.biography.strength%></p>
+<p>Speed: <%=heroes.biography.speed%></p>
+<p>Durability: <%=heroes.biography.durability%></p>
+<p>Power: <%=heroes.biography.power%></p>
+<p>Combat: <%=heroes.biography.combat%></p>
+<p>Place of birth: <%=heroes.biography.place-of-birth%></p>
+<p>Aliases: 
+    <% heroes.biography.aliases.forEach(function(alias){ %>
+        <p><%= alias %></p> 
+    
+    <% }) %> 
+</p>
+<p>Gender: <%=heroes.appearance.gender%></p>
+<p>Race: <%=heroes.appearance.race%></p>
+<p>Height: <%=heroes.appearance.height%></p>
+<p>Weight: <%=heroes.appearance.weight%></p>
+<p>Eye-color: <%=heroes.appearance.eye-color%></p>
+<p>Hair-color: <%=heroes.appearance.hair-color%></p>
+<p>Group affiliation: <%=heroes.connections.group-affiliation%></p>
+-->
+
+
+
+
+
+<!--
+<h2>Full Name: <%= heroes.biography.full-name %></h2>
+<h3>Powerstats</h3>
+<p>Intelligence: <%=heroes.biography.intelligence%></p>
+<p>Strength: <%=heroes.biography.strength%></p>
+<p>Speed: <%=heroes.biography.speed%></p>
+<p>Durability: <%=heroes.biography.durability%></p>
+<p>Power: <%=heroes.biography.power%></p>
+<p>Combat: <%=heroes.biography.combat%></p>
+<p>Place of birth: <%=heroes.biography.place-of-birth%></p>
+<p>Aliases: 
+    <% heroes.biography.aliases.forEach(function(alias){ %>
+        <p><%= alias %></p> 
+</p>
+<p>Gender: <%=heroes.appearance.gender%></p>
+<p>Race: <%=heroes.appearance.race%></p>
+<p>Height: <%=heroes.appearance.height%></p>
+<p>Weight: <%=heroes.appearance.weight%></p>
+<p>Eye-color: <%=heroes.appearance.eye-color%></p>
+<p>Hair-color: <%=heroes.appearance.hair-color%></p>
+<p>Group affiliation: <%=heroes.connections.group-affiliation%></p>
+-->
+---------------------------------------------------
+<% heroes.biography.aliases.forEach(function(alias){ %>
+   <p><%= alias %></p> 
+<!--
+<% heroes.forEach(function(hero){ %>
+    <img src=<%=hero.url%> alt="hero" />
+    <h1><%=hero.id%></h1>
+    <h1><%=hero.results.name%></h1>
+    <h2><%=hero.biography.full-name%></h2>
+    
+    <h3>Powerstats</h3>
+    <p><%=hero.powerstats.intelligence%></p>
+    <p><%=hero.powerstats.strenght%></p>
+    <p><%=hero.powerstats.speed%></p>
+    <p><%=hero.powerstats.durability%></p>
+    <p><%=hero.powerstats.power%></p>
+    <p><%=hero.powerstats.combat%></p>
+    <p><%=hero.biography.place-of-birth%></p>
+    <h3>Small biography</h3>
+    //DUDA SMALL BIOGRAPHY 
+    <p><%=hero.biography.aliases%></p>
+    <p><%=hero.appearance.gender%></p>
+    <p><%=hero.appearance.race%></p>
+    <p><%=hero.appearance.height%></p>
+    <p><%=hero.appearance.weight%></p>
+    <p><%=hero.appearance.eye-color%></p>
+    <p><%=hero.appearance.hair-color%></p>
+    <p><%=hero.connections.group-affiliation%></p>-->
