@@ -1,4 +1,4 @@
-//const port = process.env.PORT | | 8000;
+
 const express = require("express");
 const app = express();
 app.use(express.json());
@@ -11,7 +11,7 @@ const apiKey = "20603163275623904";
 const url = "https://akabab.github.io/superhero-api/api/all.json";
 const character_id = 1;
 var indice = 1;
-
+const port = process.env.PORT || 8000;
 var objeto= [{
     Image: "",
     ID: "",
@@ -48,22 +48,22 @@ app.get("/",(req, res) =>{
                             Image: jsonData[x].images["lg"],
                             ID: jsonData[x].id,
                             Name: jsonData[x].name,
-                            Full_Name: jsonData[x].biography["full-name"],
+                            Full_Name: jsonData[x].biography["fullName"],
                             Powerstats_Intelligence: jsonData[x].powerstats.intelligence,
                             Powerstats_Strength: jsonData[x].powerstats.strength,
                             Powerstats_Speed: jsonData[x].powerstats.speed,
                             Powerstats_Durability: jsonData[x].powerstats.durability,
                             Powerstats_Power: jsonData[x].powerstats.power,
                             Powerstats_Combat: jsonData[x].powerstats.combat,
-                            Place_of_birth: jsonData[x].biography["place-of-birth"],
+                            Place_of_birth: jsonData[x].biography["placeOfBirth"],
                             Aliases: jsonData[x].biography.aliases,
                             Gender: jsonData[x].appearance.gender,
                             Race: jsonData[x].appearance.race,
                             Height: jsonData[x].appearance.height,
                             Weight: jsonData[x].appearance.weight,
-                            Eye_color: jsonData[x].appearance["eye-color"],
-                            Hair_color: jsonData[x].appearance["hair-color"],
-                            Group_affiliation: jsonData[x].connections["group-affiliation"]
+                            Eye_color: jsonData[x].appearance["eyeColor"],
+                            Hair_color: jsonData[x].appearance["hairColor"],
+                            Group_affiliation: jsonData[x].connections["groupAffiliation"]
                         })
                     }
                 })
@@ -132,7 +132,10 @@ app.get("/previous",(req, res) =>{
 app.get("/h",(req, res) =>{
     console.log(objeto);
 });
-
+/*
 app.listen(3000,(err) => {
     console.log("Listening on port 3000")
-})
+});*/
+app.listen(port,(err) => {
+    console.log("Listening on port 8000")
+});
